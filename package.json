@@ -25,5 +25,9 @@
     "rimraf": "^3.0.2",
     "typescript": "^4.8.4"
   },
-  "repository": "https://github.com:CheesyGamer77/cheesyutils.js"
+  "repository": "https://github.com:CheesyGamer77/cheesyutils.js",
+  "files": [
+    "dist/**/*",
+    "node_modules/**/*"
+  ]
 }
