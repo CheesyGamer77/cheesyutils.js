@@ -77,3 +77,23 @@ export default abstract class SlashCommand extends SlashCommandBase<SlashCommand
         }
     }
 }
+
+/**
+ * Represents a global slash command that may only be used in a guild context (no dm's).
+ */
+export abstract class GuildSlashCommand extends SlashCommand {
+    constructor(name: string, description: string) {
+        super(name, description);
+        this.data.setDMPermission(false);
+    }
+}
+
+/**
+ * Represents a guild slash command that is locked by specific permissions by default
+ */
+export abstract class PermissionLockedSlashCommand extends GuildSlashCommand {
+    constructor(name: string, description: string, permissions: bigint) {
+        super(name, description);
+        this.data.setDefaultMemberPermissions(permissions);
+    }
+}
