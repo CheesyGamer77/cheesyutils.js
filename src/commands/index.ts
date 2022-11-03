@@ -6,7 +6,7 @@ import { CommandInteraction } from 'discord.js';
  * Commands primarily have three things:
  * 1) A name (string), which is used to distinguish between different commands
  * 2) A means of retrieving the command's data (IE SlashCommandBuilder from discord.js)
- * 3) The type of interaction that this command responds to (used in `process()` and `invoke()`)
+ * 3) The type of interaction that this command responds to (used in `parse()` and `invoke()`)
  *
  * In most cases, this will not be used by end users, and is mainly for internal command definitions.
  */
