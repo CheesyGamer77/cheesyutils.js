@@ -50,6 +50,9 @@ export function setEmbedTarget(opts: SetEmbedTargetArgs) {
 
     let name: string;
     let iconURL: string | undefined;
+
+    // The only reason this is both null and undefined is
+    // because of User#accentColor potentially being null | undefined :shrug:
     let color: number | null | undefined;
 
     if (target instanceof GuildMember) {
