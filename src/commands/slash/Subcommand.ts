@@ -6,7 +6,7 @@ import SlashCommandBase from '.';
  * Represents a subcommand for slash commands.
  */
 export default abstract class Subcommand extends SlashCommandBase<SlashCommandSubcommandBuilder> {
-    protected readonly data: SlashCommandSubcommandBuilder = new SlashCommandSubcommandBuilder();
+    protected readonly data = new SlashCommandSubcommandBuilder();
 
     constructor(name: string, description: string) {
         super(name);
