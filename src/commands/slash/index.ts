@@ -6,7 +6,7 @@ import { CommandBase } from '..';
  * Serves as the base class for all Slash Command objects.
  */
 // eslint-disable-next-line max-len
-export default abstract class SlashCommandBase<BuilderType> extends CommandBase<BuilderType, ChatInputCommandInteraction> {}
+export abstract class SlashCommandBase<BuilderType> extends CommandBase<BuilderType, ChatInputCommandInteraction> {}
 
 export * from './SlashCommand';
 export * from './SubcommandGroup';

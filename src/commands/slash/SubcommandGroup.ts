@@ -1,11 +1,11 @@
 import { CacheType, ChatInputCommandInteraction, SlashCommandSubcommandGroupBuilder } from 'discord.js';
-import SlashCommandBase from '.';
-import Subcommand from './Subcommand';
+import { SlashCommandBase } from '.';
+import { Subcommand } from './Subcommand';
 
 /**
  * Represents a group of slash command subcommands.
  */
-export default abstract class SubcommandGroup extends SlashCommandBase<SlashCommandSubcommandGroupBuilder> {
+export abstract class SubcommandGroup extends SlashCommandBase<SlashCommandSubcommandGroupBuilder> {
     private readonly data = new SlashCommandSubcommandGroupBuilder();
     private readonly subcommands: Map<string, Subcommand> = new Map();
 

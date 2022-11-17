@@ -1,10 +1,10 @@
 import { CommandInteraction } from 'discord.js';
-import SlashCommand from './slash/SlashCommand';
+import { SlashCommand } from './slash/SlashCommand';
 
 /**
  * Represents a container of slash commands.
  */
-export default class CommandListener {
+export class CommandListener {
     private readonly commandMap: Map<string, SlashCommand> = new Map();
 
     constructor(...commands: SlashCommand[]) {

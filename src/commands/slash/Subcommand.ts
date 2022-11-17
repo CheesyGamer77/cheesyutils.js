@@ -1,11 +1,11 @@
 import { SlashCommandSubcommandBuilder } from '@discordjs/builders';
 import { CacheType, ChatInputCommandInteraction } from 'discord.js';
-import SlashCommandBase from '.';
+import { SlashCommandBase } from '.';
 
 /**
  * Represents a subcommand for slash commands.
  */
-export default abstract class Subcommand extends SlashCommandBase<SlashCommandSubcommandBuilder> {
+export abstract class Subcommand extends SlashCommandBase<SlashCommandSubcommandBuilder> {
     protected readonly data = new SlashCommandSubcommandBuilder();
 
     constructor(name: string, description: string) {
