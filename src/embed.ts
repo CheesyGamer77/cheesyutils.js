@@ -140,7 +140,7 @@ export function failEmbed(opts: ThemedEmbedArgs) {
 export function successEmbed(opts: ThemedEmbedArgs) {
     return getThemedEmbed({
         ...opts,
-        prep: ':white_checkmark:',
+        prep: ':white_check_mark:',
         color: Colors.Green,
     });
 }
