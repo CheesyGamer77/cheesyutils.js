@@ -1,6 +1,6 @@
 {
   "name": "cheesyutils.js",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "A set of utilities, mainly for developing bots with discord.js (https://discord.js.org)",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
