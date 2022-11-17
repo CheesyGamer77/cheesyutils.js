@@ -30,7 +30,7 @@ export abstract class Subcommand extends SlashCommandBase<SlashCommandSubcommand
      */
     override async parse(ctx: ChatInputCommandInteraction<CacheType>): Promise<void> {
         if (ctx.options.getSubcommand(false) === this.name) {
-            await this.beforeInvoke(ctx);
+            await this.doInvoke(ctx);
         }
     }
 }

@@ -45,12 +45,16 @@ export abstract class CommandBase<BuilderType, CommandInteractionType extends Co
      */
     async parse(ctx: CommandInteractionType): Promise<void> {
         if (ctx.commandName === this.name) {
-            await this.beforeInvoke(ctx);
+            await this.doInvoke(ctx);
+        }
+    }
 
-            // Allows beforeInvoke to handle error messages/preconditions
-            if (!ctx.replied) {
-                await this.invoke(ctx);
-            }
+    async doInvoke(ctx: CommandInteractionType): Promise<void> {
+        await this.beforeInvoke(ctx);
+
+        // Allows beforeInvoke to handle error messages/preconditions
+        if (!ctx.replied) {
+            await this.invoke(ctx);
         }
     }
 
