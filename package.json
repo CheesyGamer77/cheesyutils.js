@@ -1,6 +1,6 @@
 {
   "name": "cheesyutils.js",
-  "version": "0.0.10",
+  "version": "1.0.0",
   "description": "A set of utilities, mainly for developing bots with discord.js (https://discord.js.org)",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
@@ -12,7 +12,7 @@
   "author": "CheesyGamer77",
   "license": "MIT",
   "dependencies": {
-    "discord.js": "^14.6.0"
+    "discord.js": "^14.7.1"
   },
   "devDependencies": {
     "@commitlint/cli": "^17.1.2",
