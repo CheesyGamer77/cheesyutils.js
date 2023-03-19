@@ -12,7 +12,7 @@
   "author": "CheesyGamer77",
   "license": "MIT",
   "dependencies": {
-    "discord.js": "^14.7.1"
+    "discord.js": "^14.8.0"
   },
   "devDependencies": {
     "@commitlint/cli": "^17.1.2",
