@@ -4,7 +4,7 @@ export function isPositive(number: number, name: string) {
     }
 }
 
-export function isInteger(number: number, name: string): asserts number is number {
+export function isInteger(number: number, name: string) {
     if (!Number.isInteger(number)) {
         throw new Error(`${name} must be an integer (got ${number})!`);
     }
