@@ -69,9 +69,11 @@ export abstract class SlashCommand extends SlashCommandBase<SlashCommandBuilder>
 
             if (subcommandGroup === null && subcommand === null) {
                 await this.doInvoke(ctx);
-            } else if (subcommandGroup === null && subcommand !== null) {
+            }
+            else if (subcommandGroup === null && subcommand !== null) {
                 await this.subcommands.get(subcommand)?.parse(ctx);
-            } else if (subcommandGroup !== null) {
+            }
+            else if (subcommandGroup !== null) {
                 await this.subcommandGroups.get(subcommandGroup)?.parse(ctx);
             }
         }

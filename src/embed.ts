@@ -59,11 +59,13 @@ export function setEmbedTarget(opts: SetEmbedTargetArgs) {
         name = target.nickname ?? target.user.tag;
         iconURL = target.avatarURL() ?? target.displayAvatarURL();
         color = target.displayColor;
-    } else if (target instanceof User) {
+    }
+    else if (target instanceof User) {
         name = target.tag;
         iconURL = target.displayAvatarURL();
         color = target.accentColor;
-    } else {
+    }
+    else {
         name = target.name;
         iconURL = target.iconURL() ?? undefined;
     }
