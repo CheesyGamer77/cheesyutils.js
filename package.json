@@ -5,14 +5,14 @@
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "scripts": {
-    "build": "yarn clean && tsc",
+    "build": "yarn clean && tsc -b",
     "clean": "rimraf ./dist",
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx"
   },
   "author": "CheesyGamer77",
   "license": "MIT",
   "dependencies": {
-    "discord.js": "^14.9.0"
+    "discord.js": "^14.11.0"
   },
   "devDependencies": {
     "@commitlint/cli": "^17.1.2",
