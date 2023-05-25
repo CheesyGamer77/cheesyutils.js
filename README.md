@@ -1,4 +1,4 @@
-# cheesyutils.ts
+# cheesyutils.js
 
 A set of personal utilities for developing bots with [discord.js](https://discord.js.org) written in TypeScript.
 
