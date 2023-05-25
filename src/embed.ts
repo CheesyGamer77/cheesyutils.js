@@ -36,8 +36,8 @@ export const MAX_EMBED_FIELD_VALUE_LENGTH = 1024;
 
 /**
  * Returns an {@link EmbedBuilder} with the following:
- * - The `author` set to use `target`'s name and avatar.
- * - The `footer` text set to the following format: `User ID: ${target.id}`.
+ * - The `author` set to use the target's name and avatar/icon.
+ * - The `footer` text set to the following format: `User (or 'Guild') ID: ${target.id}`.
  * - The `timestamp` set to the current timestamp.
  * @param {SetEmbedTargetArgs} opts The base embed builder, target, and whether to infer the embed color.
  * @returns {EmbedBuilder} The produced EmbedBuilder.
@@ -74,9 +74,11 @@ export function setEmbedTarget(opts: SetEmbedTargetArgs) {
         base.setColor(color);
     }
 
+    const targetType = target instanceof Guild ? 'Guild' : 'User'
+
     return base
         .setAuthor({ name: name, iconURL: iconURL })
-        .setFooter({ text: `User ID: ${target.id}` })
+        .setFooter({ text: `${targetType} ID: ${target.id}` })
         .setTimestamp();
 }
 
