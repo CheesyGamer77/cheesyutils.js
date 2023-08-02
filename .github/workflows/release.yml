@@ -1,0 +1,28 @@
+name: Publish to NPM
+on:
+  release:
+    type: [published]
+jobs:
+  pr:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 16
+          cache: 'yarn'
+          registry-url: 'https://registry.npmjs.org'
+      - run: yarn install --immutable
+
+      - name: Build Dependencies
+        run: yarn build
+
+      - name: Lint
+        run: yarn lint
+
+      - name: Publish
+        run: npm publish
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+
